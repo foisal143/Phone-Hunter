@@ -1,0 +1,59 @@
+body {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.productSection,
+#carouselExample {
+  margin-top: 120px;
+}
+.carosolSection {
+  position: relative;
+  top: 50px;
+}
+#cartContainer {
+  position: relative;
+}
+#count {
+  position: absolute;
+  top: -13px;
+  left: -9px;
+  /* background-color: red; */
+  padding: 5px 8px;
+  color: white;
+  border-radius: 50%;
+}
+
+#cartSection {
+  position: absolute;
+  top: 80px;
+  left: -100%;
+  width: 50%;
+  height: auto;
+  padding: 50px 10px;
+  background-color: white;
+  z-index: 500;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#navber {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 564;
+  margin-bottom: 50px;
+}
+
+#noProduct {
+  z-index: 454654654;
+}
+
+@media (max-width: 600px) {
+  #cartSection {
+    width: 100%;
+  }
+}

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phone Hunter</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- header -->
+  <header>
+    <nav id="navber" class="navbar py-3 navbar-expand-lg px-md-5 bg-body-tertiary">
+      <div class="container-fluid ">
+        <a class="navbar-brand" href="#">Phone Shop</a>
+
+
+
+        <div class="d-flex ms-md-auto my-3 my-md-0 w-75" role="search">
+          <input id="searchInput" class="form-control me-2" type="search" placeholder="Search your phone"
+            aria-label="Search">
+          <button id="searchPhone" class="btn btn-outline-success me-5" type="button">Search</button>
+
+        </div>
+
+
+        <div id="cartContainer" class="w-auto p-1 bg-secondary-subtle rounded-3">
+          <p id="count"></p>
+          <button id="cartBtn" class="btn"><i class="fa-solid fa-cart-shopping fs-3"></i></button>
+        </div>
+      </div>
+    </nav>
+    <!-- cart section -->
+    <div class="show" id="cartSection">
+      <h2 id="noProduct" class="text-center">No Product selected</h2>
+    </div>
+    <!-- show error masseage -->
+    <div id="alert" class="text-center text-warning d-none">Please Enter a phone name!</div>
+    <section class="container mx-auto carosolSection">
+      <div id="carouselExample" class="carousel slide my-5 " style="height: 55vh;">
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active  h-100">
+            <img src="1.2.jpg" class="d-block w-100 h-100" alt="...">
+          </div>
+          <div class="carousel-item h-100">
+            <img src="2.jpg" class="d-block w-100 h-100" alt="...">
+          </div>
+          <div class="carousel-item h-100">
+            <img src="3.jpg" class="d-block w-100 h-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section class="container productSection">
+      <div class="w-auto  mx-auto text-center mb-5">
+        <h2 class="fw-bold  w-auto">All Phones</h2>
+      </div>
+      <div class="my-5 row row-cols-1 row-cols-lg-4 row-cols-md-3 g-4" id="phoneContainer">
+
+      </div>
+      <!-- Product not found -->
+      <div id="NoFound">
+
+      </div>
+
+      <!-- loader section -->
+      <section id="loader" class="text-center w-50 mx-auto mb-5 d-none">
+        <button class="btn btn-primary" type="button" disabled>
+          <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+          <span role="status">Loading...</span> </button>
+      </section>
+      <!-- show all Btn -->
+      <div id="showContainer" class="text-center d-none">
+        <button id="showAll" class="btn btn-warning">Show All</button>
+
+      </div>
+    </section>
+    <!-- modal section -->
+
+    <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="detailsTitle"></h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div id="detailsBody" class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </main>
+  <footer class="bg-dark text-white text-center p-3 mt-5">
+    <small>This website created by Foisal programer</small>
+  </footer>
+  <!-- js files -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="hello.js"></script>
+</body>
+
+</html>
